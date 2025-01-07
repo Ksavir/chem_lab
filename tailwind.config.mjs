@@ -8,6 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: '#ECE30A',
+        bluenav: '#1a3c5c',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
