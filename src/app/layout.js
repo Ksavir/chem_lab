@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "SunLab Group",
+  title: "SunLab Group LTD",
   description:
     "Sunlab, Malta, Zurrieq, Valletta, La Valletta, Chemical Analisys, Traffic, life science park, breeze roads, air quality, physico-chemical analysis of gas, chemical, cada snc, menfi, emissions into the atmosphere, chimneys, cada, cadaonline.it, cadanet",
 };

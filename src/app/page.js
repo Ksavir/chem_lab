@@ -9,6 +9,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactUs from "@/components/ContactUs";
 import Certifications from "@/components/Certifications";
+import About from "@/components/About";
+import Team from "@/components/Team"
 
 
 const LandingPage = () => {
@@ -68,60 +70,8 @@ const LandingPage = () => {
       {/* Hero Section */}
       <Hero />
       {/* About us Section */}
-      <div className="py-10 bg-white border-b-2">
-        <div className="rounded-xl container mx-auto p-4 text-center ">
-          <h2 className="text-4xl font-bold mb-8 text-bluenav text-center">
-            About us
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-10">
-            <p className="text-gray-600 text-xl text-justify leading-relaxed h-full">
-              Sunlab was founded in 2008 from an idea by a single professional,
-              Dott. Giglio Filippo, who has seen a natural application of the
-              knowledge acquired with a chemistry degree and successively an
-              in-depth study at masters level on the chemical processes applied
-              to environmental remidiation techniques. Since January 2016 Sunlab
-              is operative with her lab to the LS 2.0.12 - Sir Temi Buildings at
-              Malta Life Sciences Park, in San Gwann. The laboratory space is
-              about 130 m2, this will provide Sunlab with more space and for
-              growing into a cutting-edge facility that will be providing world
-              class facilities including laboratories, offices, lecture
-              theaters, meeting rooms and a number of perfectly equipped shared
-              facilities, giving space to local and International Organizations
-              Research, to explore and create.
-            </p>
-            <img
-              src="images/maltalab.jpg"
-              alt="SunLab Group LTD"
-              className="w-full rounded-lg"
-            />
-          </div>
-        </div>
-      </div>
-      {/* <div className="py-10 bg-white">
-        <div className="rounded-xl container mx-auto p-4 text-center">
-          <h2 className="text-4xl font-bold mb-4 text-bluenav">About us</h2>
-
-          <div className="max-w-2xl mx-auto grid grid-cols-2 gap-4">
-            <p className="text-gray-600 mb-6 text-justify object-cover">
-              Sunlab was founded in 2008 from an idea by a single professional,
-              Dott. Giglio Filippo, who has seen a natural application of the
-              knowledge acquired with a chemistry degree and successively an
-              in-depth study at masters level on the chemical processes applied
-              to environmental remidiation techniques. Since January 2016 Sunlab
-              is operative with her lab to the LS 2.0.12 - Sir Temi Buildings at
-              Malta Life Sciences Park, in San Gwann. The laboratory space is
-              about 130 m2, this will provide Sunlab with more space and for
-              growing into a cutting-edge facility that will be providing world
-              class facilities including laboratories, offices, lecture
-              theaters, meeting rooms and a number of perfectly equipped shared
-              facilities, giving space to local and International Organizations
-              Research, to explore and create.
-            </p>
-            <img src="images/maltalab.jpg" alt="SunLab Group LTD" className="w-full h-full" />
-          </div>
-        </div>
-      </div> */}
+      <About />
+      {/* Certifications Section */}
       <Certifications />
       {/* Activities Section */}
       <div className="py-10 bg-white text-center text-bluenav">
@@ -144,31 +94,7 @@ const LandingPage = () => {
           />
         </div>
       </div>
-      
-      
 
-      {/* <div className="py-10 bg-white text-center text-bluenav">
-        <h2 className="text-3xl font-bold mb-4">Our Activities</h2>
-        <div className="py-10 bg-white grid lg:grid-cols-3">
-          <Card
-            title="💧 Chemical, physical and microbiological analysis"
-            description="Sampling and analysis of chemical, physical and microbiological parameters in sediments, soils and subsoils waters,etc. That are contaminated or potentially so"
-            imageUrl="../images/analysis.jpeg"
-          />
-          <Card
-            title="🌳 Enviromental Monitoring"
-            description="Environmental monitoring pre-construction, during construction and post-construction on environmental matrices connected to the execution of major works. Activities carried out using a mobile laboratory and / or fixed station for measurement of airborne gases, particulate matter, noise, vibrations and magnetic fields"
-            imageUrl="../images/enviroment.jpeg"
-          />
-          <Card
-            title="⚙️ Technical services"
-            description="he company offers a wide range of technical services for the design, technical direction, monitoring and management process of the principal acts to minimize environmental impacts arising from the operation of industrial activities and/or civil liability; laboratories, offices, and shared spaces designed to support both local and international research initiatives"
-            imageUrl="../images/services.jpeg"
-          />
-        </div>
-      </div> */}
-      {/* Certifications Section */}
-        
       {/* Trusted Customers Section */}
       <div className="py-8 bg-gray-50 px-10">
         <div className="container mx-auto px-6">
@@ -178,7 +104,7 @@ const LandingPage = () => {
           <div className="flex overflow-hidden space-x-8">
             <motion.div
               animate={{ x: ["0%", "-100%"] }}
-              transition={{ repeat: Infinity, duration: 90, ease: "linear" }}
+              transition={{ repeat: Infinity, duration: 180, ease: "linear" }}
               className="flex space-x-8 min-w-max"
             >
               {[...customerLogos, ...customerLogos].map((logo, index) => (
@@ -193,7 +119,32 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-
+      {/*Our Team Section*/}
+      <div className="py-10 bg-bluenav text-center ">
+        <h2 className="text-3xl font-bold mb-8 text-primary">Our Team</h2>
+        <div className="grid gap-12 shadow-xs lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 px-4 md:px-10">
+          <Team
+            name="Kevin Rivas"
+            description="Enviromental Technician"
+            imageUrl="https://avatar.iran.liara.run/public/42"
+          />
+          <Team
+            name="Lionel Fernandez"
+            description="Enviromental Technician"
+            imageUrl="https://avatar.iran.liara.run/public/43"
+          />
+          <Team
+            name="Carmelo Martini"
+            description="Enviromental Technician"
+            imageUrl="https://avatar.iran.liara.run/public/44"
+          />
+          <Team
+            name="Marlyn Silva"
+            description="Enviromental Technician"
+            imageUrl="https://avatar.iran.liara.run/public/75"
+          />
+        </div>
+      </div>
       {/* Contact Section */}
       <ContactUs id="contact" />
       {/* Footer */}
